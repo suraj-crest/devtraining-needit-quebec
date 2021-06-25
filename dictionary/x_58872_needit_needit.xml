@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
-        <element label="New field 2" max_length="40" name="new_field_2" type="integer"/>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="66" type="collection">
+        <element choice="1" choice_field="game" choice_table="x_58872_needit_needit" label="Game" max_length="40" name="game" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="-- New choice --" value="-- New choice --"/>
+                <element inactive_on_update="false" label="cards" value="cards"/>
+                <element inactive_on_update="false" label="Chess" value="Chess"/>
+            </choice>
+        </element>
+        <element choice="1" label="Game Type" max_length="40" name="game_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Indoor games" value="Indoor games"/>
+                <element inactive_on_update="false" label="Outdoor games" value="Outdoor games"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+        <element choice="1" label="What needed" max_length="40" name="what_needed" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="-- New choice --" value="-- New choice --"/>
+                <element inactive_on_update="false" label="abc" value="abc"/>
+                <element inactive_on_update="false" label="Other" value="Other"/>
+            </choice>
+        </element>
     </element>
 </database>
